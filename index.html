@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>webgl</title>
+    <script src="libraries/p5.js" type="text/javascript"></script>
+
+    <script src="script.js" type="text/javascript"></script>
+      
+      <script src="https://webglfundamentals.org/webgl/resources/webgl-utils.js"></script>
+
+    <style> 
+        @import url("https://webglfundamentals.org/webgl/resources/webgl-tutorials.css");
+        body {
+          margin: 0;
+        }
+        canvas {
+          width: 100vw;
+          height: 100vh;
+          display: block;
+        }
+    </style>
+  </head>
+  <body>
+      <canvas id="c"></canvas>
+      
+      <script id="vertex-shader-2d" type="notjs">
+      
+      // receive data from buffer
+      attribute vec4 aPosition;
+      
+      void main(){
+      
+        gl_Position = aPosition;
+      }
+      
+      </script>
+      
+      <script id="frag-shader-2d" type="notjs">
+      
+      // set the precision of the shaer to medium
+      precision mediump float;
+      
+      void main(){
+      
+        gl_FragColor = vec4(1, 0, 0.5, 1);
+      }
+      
+      </script>
+      
+  </body>
+</html>
